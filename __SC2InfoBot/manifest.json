@@ -1,0 +1,22 @@
+﻿{
+  "name": "SC2InfoBot",
+  "description": "Информер для сайта sc2tv.ru. Стримы, анонсы, новости портала.",
+  "version": "2.1",
+  "update_url": "http://tv.sc2tv.ru/plugins/sc2infobot/update.xml",
+  "background_page": "background.html",
+  "icons": {
+    "48": "img/icons/icon_48.ico",
+    "32": "img/icons/icon_32.ico"
+  },
+  "browser_action": {
+    "default_icon": "img/icons/icon_.ico",
+    "popup": "popup.html",
+    "default_title": "SC2InfoBot для сайта sc2tv.ru"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

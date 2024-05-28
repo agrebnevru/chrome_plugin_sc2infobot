@@ -1,0 +1,163 @@
+﻿<html>
+<head>
+<title>SC2InfoBot - Настройки</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script language="javascript" src="js/main.js"></script>
+<script language="javascript" src="js/options.js"></script>  
+</head>
+<body>
+<div id="tabbed_box_1" class="tabbed_box">
+<div id="text" class="tabbed_area">
+<script>
+document.write('<div class="header" style="background:url(/img/head_' + localStorage.logo_index + '.jpg) no-repeat;"></div>');
+</script>
+<div id="content_1" class="content">
+<center><a href="http://sc2tv.ru/" title="Перейти на сайт sc2tv.ru" target="_blank"><img src="img/logo.png" alt="" /></a></center>
+<hr />
+Частота обновления:
+<select name="TmUpd" id="TimeUpdateInt">
+<script>
+if (localStorage.TimeUpdate) { var tum = localStorage.TimeUpdate; } else { var tum2 = 5; }
+
+document.write("<option value='5'");
+if (tum == 5) document.write(" selected ");
+document.write(">5 Мин.</option>");
+
+document.write("<option value='10'");
+if (tum == 10) document.write(" selected ");
+document.write(">10 Мин.</option>");
+
+document.write("<option value='15'");
+if (tum == 15) document.write(" selected ");
+document.write(">15 Мин.</option>");
+
+document.write("<option value='20'");
+if (tum == 20) document.write(" selected ");
+document.write(">20 Мин.</option>");
+
+document.write("<option value='25'");
+if (tum == 25) document.write(" selected ");
+document.write(">25 Мин.</option>");
+
+document.write("<option value='30'");
+if (tum == 30) document.write(" selected ");
+document.write(">30 Мин.</option>");
+
+document.write("<option value='45'");
+if (tum == 45) document.write(" selected ");
+document.write(">45 Мин.</option>");
+
+document.write("<option value='60'");
+if (tum == 60) document.write(" selected ");
+document.write(">1 Час.</option>");
+
+document.write("<option value='75'");
+if (tum == 75) document.write(" selected ");
+document.write(">1 Час 15 мин.</option>");
+
+document.write("<option value='90'");
+if (tum == 90) document.write(" selected ");
+document.write(">1 Час 30 мин.</option>");
+
+document.write("<option value='105'");
+if (tum == 105) document.write(" selected ");
+document.write(">1 Час 45 мин.</option>");
+
+document.write("<option value='120'");
+if (tum == 120) document.write(" selected ");
+document.write(">2 Часа.</option>");
+
+</script>
+</select>
+<hr />
+При нажатии на ссылку online стрима:<br />
+<script>
+if (localStorage.ClickOnStream) { var tum1 = localStorage.ClickOnStream; } else { var tum1 = 2; }
+
+document.write("<input type='radio' id='IdClickOnStream' name='ClickOnStream' onClick='UpdateIndex2(this.value);' value='0'");
+if (tum1 == 0) document.write(" checked ");
+document.write("> Открывать главную страницу sc2tv<br />");
+
+//document.write("<input type='radio' id='IdClickOnStream' name='ClickOnStream' onClick='UpdateIndex2(this.value);' value='1'");
+//if (tum1 == 1) document.write(" checked ");
+//document.write("> Открывать стрим в новой вкладке<br />");
+
+document.write("<input type='radio' id='IdClickOnStream' name='ClickOnStream' onClick='UpdateIndex2(this.value);' value='2'");
+if (tum1 == 2) document.write(" checked ");
+document.write("> Открывать стрим во всплывающем окне (маленькое окошко)<br />");
+
+</script>
+<hr />
+При нажатии на ссылку фан-стрима:<br />
+<script>
+if (localStorage.ClickUsStream) { var tum1 = localStorage.ClickUsStream; } else { var tum1 = 2; }
+
+document.write("<input type='radio' id='IdClickUsStream' name='ClickUsStream' onClick='UpdateIndex3(this.value);' value='0'");
+if (tum1 == 0) document.write(" checked ");
+document.write("> Открывать страницу стрима на sc2tv<br />");
+
+//document.write("<input type='radio' id='IdClickUsStream' name='ClickUsStream' onClick='UpdateIndex3(this.value);' value='1'");
+//if (tum1 == 1) document.write(" checked ");
+//document.write("> Открывать стрим в новой вкладке<br />");
+
+document.write("<input type='radio' id='IdClickUsStream' name='ClickUsStream' onClick='UpdateIndex3(this.value);' value='2'");
+if (tum1 == 2) document.write(" checked ");
+document.write("> Открывать стрим во всплывающем окне (маленькое окошко)<br />");
+
+</script>
+<hr />
+Отображать в подсказке (выводится при наведении на иконку):<br />
+<script>
+if (localStorage.ShowOnTitle1) { var tum31 = localStorage.ShowOnTitle1; } else { var tum31 = 1; }
+if (localStorage.ShowOnTitle2) { var tum32 = localStorage.ShowOnTitle2; } else { var tum32 = 1; }
+if (localStorage.ShowOnTitle3) { var tum33 = localStorage.ShowOnTitle3; } else { var tum33 = 1; }
+if (localStorage.ShowOnTitle4) { var tum34 = localStorage.ShowOnTitle4; } else { var tum34 = 1; }
+
+document.write("<input type='checkbox' id='ShowOnTitle1' name='ShowOnTitle1' onClick='CheckBoxUpdate1(this)' value='2'");
+if (tum31 == 2) document.write(" checked ");
+document.write("> Сколько стримов online<br />");
+
+document.write("<input type='checkbox' id='ShowOnTitle4' name='ShowOnTitle4' onClick='CheckBoxUpdate4(this)' value='2'");
+if (tum34 == 2) document.write(" checked ");
+document.write("> Сколько фан-стримов<br />");
+
+document.write("<input type='checkbox' id='ShowOnTitle2' name='ShowOnTitle2' onClick='CheckBoxUpdate2(this)' value='2'");
+if (tum32 == 2) document.write(" checked ");
+document.write("> Количество непрочитанных анонсов<br />");
+
+document.write("<input type='checkbox' id='ShowOnTitle2' name='ShowOnTitle3' onClick='CheckBoxUpdate3(this)' value='2'");
+if (tum33 == 2) document.write(" checked ");
+document.write("> Количество непрочитанных новостей<br />");
+
+</script>
+<hr />
+Отображать на иконке (дополнительно отображается на иконке):<br />
+<script>
+if (localStorage.AddOnFavicon) { var tum2 = localStorage.AddOnFavicon; } else { var tum2 = 0; }
+
+document.write("<input type='radio' id='IconIMG' name='AddOnFavicon' onClick='UpdateIndex(this.value);' value='0'");
+if (tum2 == 0) document.write(" checked ");
+document.write("> Ничего<br />");
+
+document.write("<input type='radio' id='IconIMG' name='AddOnFavicon' onClick='UpdateIndex(this.value);' value='1'");
+if (tum2 == 1) document.write(" checked ");
+document.write("> Количество непрочитанных анонсов<br />");
+
+document.write("<input type='radio' id='IconIMG' name='AddOnFavicon' onClick='UpdateIndex(this.value);' value='2'");
+if (tum2 == 2) document.write(" checked ");
+document.write("> Количество непрочитанных новостей<br />");
+
+</script>
+<hr />
+<center>
+<input type="button" id="save-button" onClick="SaveSettings();" value="Сохранить">
+<input type="button" id="cancel-button" onClick="Close();" value="Закрыть">
+</center>
+<br />
+<div class="small">Powered by MyIE &copy myietwo@mail.ru</div>
+</div>
+</div>
+</div>
+  
+</body>
+</html>

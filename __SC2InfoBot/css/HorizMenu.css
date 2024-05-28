@@ -1,0 +1,151 @@
+.HorizMenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.HorizMenu ul li ul li a:hover{
+background: #cde686;
+color: #666666;
+}
+
+/* Отрисовываем иконки для меню begin */
+#menu1 {
+background-image:url(/img/menu_icons/site_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu1:hover {
+background-image:url(/img/menu_icons/site.ico);
+}
+
+#menu2 {
+background-image:url(/img/menu_icons/forum_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu2:hover {
+background-image:url(/img/menu_icons/forum.ico);
+}
+
+#menu3 {
+background-image:url(/img/menu_icons/vkontakte_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu3:hover {
+background-image:url(/img/menu_icons/vkontakte.ico);
+}
+
+#menu4 {
+background-image:url(/img/menu_icons/wiki_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu4:hover {
+background-image:url(/img/menu_icons/wiki.ico);
+}
+
+#menu5 {
+background-image:url(/img/menu_icons/you_tube_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu5:hover {
+background-image:url(/img/menu_icons/you_tube.ico);
+}
+
+#menu6 {
+background-image:url(/img/menu_icons/tourney_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu6:hover {
+background-image:url(/img/menu_icons/tourney.ico);
+}
+
+#menu7 {
+background-image:url(/img/menu_icons/magazin_.ico);
+display: block;
+background-position: 2% 50%;
+background-repeat: no-repeat;
+}
+
+#menu7:hover {
+background-image:url(/img/menu_icons/magazin.ico);
+}
+/* Отрисовываем иконки для меню end */
+
+/* Стиль горизонтальной менюшки (top level) */
+.HorizMenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/* Стиль горизонтальной менюшки - ссылки (top level) */
+.HorizMenu ul li a{
+display: block;
+width: 110px;
+padding: 2px 8px;
+border: 1px solid #333333;
+border-left-width: 0;
+text-decoration: none;
+color: white;
+font: bold 13px Tahoma;
+}
+	
+/* Стиль горизонтальной менюшки (sub level) */
+.HorizMenu ul li ul{
+left: 0;
+top: 0;
+border-top: 1px solid #333333;
+position: absolute;
+display: block;
+visibility: hidden;
+z-index: 100;
+}
+
+/* Стиль горизонтальной менюшки - пункты менюшки (sub level) */
+.HorizMenu ul li ul li{
+display: inline;
+float: none;
+}
+
+/* Стиль горизонтальной менюшки - ссылки (sub level) */
+.HorizMenu ul li ul li a{
+width: 90px;
+font-weight: normal;
+padding: 2px 22px;
+margin: 0px;
+color: #ffffff;
+background: #999999;
+border-width: 1 1px 1px 1px;
+float:left;
+}
+
+.HorizMenu .arrowdiv{
+position: absolute;
+right: 0;
+}
+
+/* Для IE */
+* html p#iepara{
+padding-top: 1em;
+}
+	
+/* Для IE */
+* html .HorizMenu ul li { float: left; height: 1%; }
+* html .HorizMenu ul li a { height: 1%; }

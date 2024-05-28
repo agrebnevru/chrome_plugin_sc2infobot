@@ -1,0 +1,73 @@
+﻿<html> 
+<head>
+<title>SC2InfoBot</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/HorizMenu.css" />
+  <script language="javascript" src="js/utils.js"></script>
+  <script language="javascript" src="js/xml2json.js"></script>
+  <script language="javascript" src="js/main.js"></script>
+  <script language="javascript" src="js/tabs.js"></script>
+  <script language="javascript" src="js/HorizMenu.js"></script>
+</head> 
+<body onload="SetDataSettingsOnload();"> 
+<noscript>Ваш браузер настроен неверно. Включите поддержку JavaScript.</noscript>  
+<div id="tabbed_box_1" class="tabbed_box">
+    <div class="tabbed_area">
+<!-- Горизонтальное выпадающего меню begin -->
+    <div class="HorizMenu">
+    <ul id="cssmenu1">
+    <li><a href="#" style="background-image:url(img/strelka_vniz.ico); background-position: 60% 50%; background-repeat: no-repeat;">Главная</a>
+        <ul>
+        <li><a href="http://sc2tv.ru/" target="_blank" id="menu1">Сайт</a></li>
+        <li><a href="http://forum.sc2tv.ru/" target="_blank" id="menu2">Форум</a></li>
+        <li><a href="http://vkontakte.ru/club7660791" target="_blank" id="menu3">Вконтакте</a></li>
+        </ul>
+    </li>
+    <li><a href="#" style="background-image:url(img/strelka_vniz.ico); background-position: 64% 50%; background-repeat: no-repeat;">Проекты</a>
+        <ul>
+        <li><a href="http://wiki.sc2tv.ru/" target="_blank" id="menu4">StarCraft Wiki</a></li>
+        <li><a href="http://www.youtube.com/vsaenostock" target="_blank" id="menu5">Канал YouTube</a></li>
+        <li><a href="http://cup.sc2tv.ru/" target="_blank" id="menu6">Турниры</a></li>
+        <li><a href="http://shop.sc2tv.ru/" target="_blank" id="menu7">Магазин</a></li>
+        </ul>
+    </li>
+    <li><a href="options.html" target="_blank">Опции плагина</a>
+    </li>
+    </ul>
+    </div>
+    <script>
+    document.write('<div class="header" style="background:url(/img/head_' + localStorage.logo_index + '.jpg) no-repeat; margin-top: 22px;"></div>');
+    </script>
+<!-- Горизонтальное выпадающего меню end -->
+      <ul class="tabs">  
+        <li><a href="javascript:tabSwitch('tab_1', 'content_1');" id="tab_1" class="active">Стримы</a></li>
+        <li><a href="javascript:tabSwitch('tab_2', 'content_2');" id="tab_2">Фан-стримы</a></li>  
+        <li><a href="javascript:tabSwitch('tab_3', 'content_3');" id="tab_3">Анонсы</a></li>  
+        <li><a href="javascript:tabSwitch('tab_4', 'content_4');" id="tab_4">Новости</a></li>
+        <li><a href="javascript:ShowPopUpChat();">Чат</a></li>  
+      </ul>
+      <div id="content_1" class="content">
+        <script>
+        document.write(parseSC2TVapi_online_());
+        </script>
+      </div>
+      <div id="content_2" class="content"> 
+        <script>
+        document.write(parseSC2TVapi_userstream_());
+        </script> 
+      </div> 
+      <div id="content_3" class="content">  
+        <script>
+        document.write(parseSC2TVapi_future_());
+        </script>  
+      </div> 
+      <div id="content_4" class="content"> 
+        <script>
+        document.write(parseSC2TVapi_news_());
+        </script>  
+      </div>
+  </div>    
+</div>
+
+</body> 
+</html>

@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script language="javascript" src="js/utils.js"></script>
+  <script language="javascript" src="js/xml2json.js"></script>
+  <script language="javascript" src="js/main.js"></script>
+<script>
+localStorage.HorizMenu = 0;
+localStorage.HorizMenu2 = 0;
+localStorage.logo_index = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+func();
+if (localStorage.TimeUpdate != null ) {
+var TmUpdate = 1000*60*localStorage.TimeUpdate;
+} else {
+var TmUpdate = 1000*60*5;
+ }
+setInterval('func()', TmUpdate);
+</script>
+</head> 
+</html>
